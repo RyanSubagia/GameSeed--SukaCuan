@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveForce = 10f; // strength of rolling
     private Rigidbody rb;
-    public float maxSpeed = 10f;
+    public float maxSpeed = 20f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,5 +36,15 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
-
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Customer"))
+        {
+            Customer customer = other.GetComponent<Customer>();
+            if (customer != null)
+            {
+                customer.OnServed();
+            }
+        }
+    }
 }

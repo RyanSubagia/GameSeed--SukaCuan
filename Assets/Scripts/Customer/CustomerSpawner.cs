@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class CustomerSpawner : MonoBehaviour
@@ -7,23 +8,24 @@ public class CustomerSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public float spawnInterval = 10f;
 
-    private float timer = 0f;
     private List<Transform> availableSpawnPoints = new List<Transform>();
 
     void Start()
     {
         availableSpawnPoints.AddRange(spawnPoints);
-        timer = spawnInterval;
+        StartCoroutine(SpawnLoop());
     }
 
-    void Update()
+    IEnumerator SpawnLoop()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0f && availableSpawnPoints.Count > 0)
+        while (true)
         {
-            SpawnCustomer();
-            timer = spawnInterval;
+            if (availableSpawnPoints.Count > 0)
+            {
+                SpawnCustomer();
+            }
+
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
 
