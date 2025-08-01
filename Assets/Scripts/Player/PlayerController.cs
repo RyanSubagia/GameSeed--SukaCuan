@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveForce = 10f; // strength of rolling
     private Rigidbody rb;
-
+    public float maxSpeed = 10f;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -27,8 +27,14 @@ public class PlayerController : MonoBehaviour
             Vector3 targetPoint = ray.GetPoint(distance);
             Vector3 direction = (targetPoint - transform.position).normalized;
 
-            Vector3 force = new Vector3(direction.x, 0, direction.z) * moveForce;
-            rb.AddForce(force);
+            if (rb.velocity.magnitude < maxSpeed)
+            {
+                Vector3 force = new Vector3(direction.x, 0, direction.z) * moveForce;
+                rb.AddForce(force);
+            }
+
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
+
 }
