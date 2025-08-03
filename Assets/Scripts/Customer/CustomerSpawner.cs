@@ -56,4 +56,4 @@ public class CustomerSpawner : MonoBehaviour
             availableSpawnPoints.Add(point);
         }
     }
-}
+}   
