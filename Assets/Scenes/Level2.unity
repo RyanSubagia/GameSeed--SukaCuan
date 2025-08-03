@@ -1553,6 +1553,8 @@ GameObject:
   - component: {fileID: 2995778719282406672}
   - component: {fileID: 1386756736898383997}
   - component: {fileID: 2448268822605262}
+  - component: {fileID: 2995778719282406673}
+  - component: {fileID: 2995778719282406674}
   m_Layer: 0
   m_Name: CylinderSpin.003
   m_TagString: Untagged
@@ -1973,6 +1975,33 @@ Transform:
   m_Father: {fileID: 8098982097891164218}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2995778719282406673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755257221749790042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a52f5273c96946b769dbfaa41f0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelSpeed: -200
+--- !u!64 &2995778719282406674
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755257221749790042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6022043651701856745, guid: a0bbae9b9c49f96409cdb52bdc5c8bac, type: 3}
 --- !u!33 &3083758994441200949
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3032,7 +3061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1a52f5273c96946b769dbfaa41f0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelSpeed: 10
+  wheelSpeed: 100
 --- !u!4 &6254332921454824711
 Transform:
   m_ObjectHideFlags: 0
@@ -3473,6 +3502,7 @@ GameObject:
   - component: {fileID: 2629306971850612222}
   - component: {fileID: 6249858156753393141}
   - component: {fileID: 7098991006506095439}
+  - component: {fileID: 7098991006506095440}
   m_Layer: 0
   m_Name: CylinderRot
   m_TagString: Untagged
@@ -3494,6 +3524,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5335109145118160315, guid: a0bbae9b9c49f96409cdb52bdc5c8bac, type: 3}
+--- !u!114 &7098991006506095440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098991006506095438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a52f5273c96946b769dbfaa41f0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelSpeed: 100
 --- !u!4 &7126670029285032372
 Transform:
   m_ObjectHideFlags: 0
@@ -3536,6 +3579,7 @@ GameObject:
   - component: {fileID: 1313995602249175701}
   - component: {fileID: 4405327428368622139}
   - component: {fileID: 7180793572704086001}
+  - component: {fileID: 7180793572704086002}
   m_Layer: 0
   m_Name: CylinderRot1
   m_TagString: Untagged
@@ -3557,6 +3601,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4355818526586185157, guid: a0bbae9b9c49f96409cdb52bdc5c8bac, type: 3}
+--- !u!114 &7180793572704086002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180793572704086000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a52f5273c96946b769dbfaa41f0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelSpeed: -100
 --- !u!1 &7239026818377657064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3985,7 +4042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1a52f5273c96946b769dbfaa41f0af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelSpeed: -15
+  wheelSpeed: -100
 --- !u!4 &8472722027700446285
 Transform:
   m_ObjectHideFlags: 0
