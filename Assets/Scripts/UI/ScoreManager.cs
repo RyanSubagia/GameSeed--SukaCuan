@@ -24,13 +24,13 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Skor: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void AddScore(int points)
     {
         score += points;
-        scoreText.text = "Skor: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString();
         Debug.Log("Skor bertambah! Skor sekarang: " + score);
     }
     public int GetFinalScore()
