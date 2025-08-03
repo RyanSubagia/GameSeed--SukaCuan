@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
             {
                 playerItem.hasTahuTek = true;
                 other.gameObject.SetActive(false);
+                AudioManager.instance.PlayPickupSound();
+                NotificationManager.instance.ShowNotification("Picked up a Tahu Tek !");
+
             }
         }
         else if (other.CompareTag("Customer"))
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour
                 if (customer != null)
                 {
                     customer.OnServed();
+                    NotificationManager.instance.ShowNotification("Tahu Tek delivered! Return to the kitchen.");
                 }
                 playerItem.hasTahuTek = false;
             }
