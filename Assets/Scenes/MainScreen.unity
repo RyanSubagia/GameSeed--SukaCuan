@@ -1735,7 +1735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1759129318
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1746,7 +1746,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e26e422b8d76bc44096f92f8ce743e51, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0dd92407de0f44f4d924d7b27df2fe14, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1846,8 +1846,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1759129318}
   sfxSource: {fileID: 1759129318}
-  backgroundMusic: {fileID: 8300000, guid: e26e422b8d76bc44096f92f8ce743e51, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 0dd92407de0f44f4d924d7b27df2fe14, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 07d22b1446d9b2a449bcac9e45326b1e, type: 3}
+  pickupSound: {fileID: 8300000, guid: a3a049a31900ece4095a5cd0af3acc95, type: 3}
+  deliverySuccessSound: {fileID: 8300000, guid: 698abf63d71a7d442b49d3a79c08c064, type: 3}
 --- !u!4 &1759129320
 Transform:
   m_ObjectHideFlags: 0

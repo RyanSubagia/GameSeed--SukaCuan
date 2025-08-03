@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip backgroundMusic;
     public AudioClip buttonClickSound;
+    public AudioClip pickupSound;
+    public AudioClip deliverySuccessSound;
 
     private void Awake()
     {
@@ -33,5 +35,15 @@ public class AudioManager : MonoBehaviour
     public void PlayButtonClickSound()
     {
         sfxSource.PlayOneShot(buttonClickSound);
+    }
+
+    public void PlayPickupSound()
+    {
+        sfxSource.PlayOneShot(pickupSound,2f);
+    }
+
+    public void PlayDeliverySuccessSound()
+    {
+        sfxSource.PlayOneShot(deliverySuccessSound);
     }
 }
