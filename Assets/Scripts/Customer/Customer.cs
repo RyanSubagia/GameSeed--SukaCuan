@@ -71,7 +71,6 @@ public class Customer : MonoBehaviour
 
     public void OnServed()
     {
-        AudioManager.instance.PlayDeliverySuccessSound();
         ScoreManager.instance.AddScore(scoreValue);
         FindObjectOfType<CustomerSpawner>().FreeSpawnPoint(mySpawnPoint);
         Destroy(gameObject);
