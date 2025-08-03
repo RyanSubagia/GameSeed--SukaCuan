@@ -1,3 +1,4 @@
+// CustomerSpawner.cs
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,11 @@ public class CustomerSpawner : MonoBehaviour
     {
         while (true)
         {
+            if (GameTimer.instance != null && !GameTimer.instance.timerIsRunning)
+            {
+                yield break;
+            }
+
             if (availableSpawnPoints.Count > 0)
             {
                 SpawnCustomer();

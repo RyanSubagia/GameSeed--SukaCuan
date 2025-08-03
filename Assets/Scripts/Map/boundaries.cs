@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class boundaries : MonoBehaviour
 {
-    public Transform respawnPoint; 
+    public Transform respawnPoint;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-
-            if (rb != null)
-            {
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-            }
+            Rigidbody playerRb = other.GetComponent<Rigidbody>();
+            PlayerItem playerItem = other.GetComponent<PlayerItem>();
 
             other.transform.position = respawnPoint.position;
-            Debug.Log("Player respawned.");
+
+            if (playerRb != null)
+            {
+                playerRb.velocity = Vector3.zero;
+                playerRb.angularVelocity = Vector3.zero;
+            }
+
+            if (playerItem != null)
+            {
+                playerItem.hasTahuTek = false;
+            }
+
+            TahutekManager.instance.ResetTahuTekPickup();
         }
     }
 }

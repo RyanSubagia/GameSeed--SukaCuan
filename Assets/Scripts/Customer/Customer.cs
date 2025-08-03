@@ -8,10 +8,12 @@ public class Customer : MonoBehaviour
     private bool isAngry = false;
 
     private Transform mySpawnPoint;
-
+    public int scoreValue = 10;
     void Start()
     {
         timer = angryTime;
+        StartCoroutine(SpawnBounce());
+
     }
     IEnumerator SpawnBounce()
     {
@@ -69,6 +71,7 @@ public class Customer : MonoBehaviour
 
     public void OnServed()
     {
+        ScoreManager.instance.AddScore(scoreValue);
         FindObjectOfType<CustomerSpawner>().FreeSpawnPoint(mySpawnPoint);
         Destroy(gameObject);
     }

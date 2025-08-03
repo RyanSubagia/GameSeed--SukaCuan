@@ -1,19 +1,31 @@
+// PlayerController.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveForce = 10f; // strength of rolling
+    public float moveForce = 10f;
     private Rigidbody rb;
     public float maxSpeed = 20f;
+
+    private PlayerItem playerItem;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerItem = GetComponent<PlayerItem>();
     }
 
     void FixedUpdate()
     {
+        if (GameTimer.instance != null && !GameTimer.instance.timerIsRunning)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            return;
+        }
+
         MoveTowardMouse();
     }
 
@@ -36,14 +48,32 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
         }
     }
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Customer"))
+        if (GameTimer.instance != null && !GameTimer.instance.timerIsRunning)
         {
-            Customer customer = other.GetComponent<Customer>();
-            if (customer != null)
+            return;
+        }
+
+        if (other.CompareTag("TahuTekPickup"))
+        {
+            if (!playerItem.hasTahuTek)
             {
-                customer.OnServed();
+                playerItem.hasTahuTek = true;
+                other.gameObject.SetActive(false);
+            }
+        }
+        else if (other.CompareTag("Customer"))
+        {
+            if (playerItem.hasTahuTek)
+            {
+                Customer customer = other.GetComponent<Customer>();
+                if (customer != null)
+                {
+                    customer.OnServed();
+                }
+                playerItem.hasTahuTek = false;
             }
         }
     }

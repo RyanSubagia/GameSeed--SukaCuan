@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class PlayerItem : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    public bool hasTahuTek = false;
 
-    void Update()
-    {
-        
-    }
 }
