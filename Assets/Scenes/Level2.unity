@@ -978,6 +978,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62f1a59f6c4d5ba4abfb6d94bb4ba455, type: 3}
+--- !u!1 &415370639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4929579155961084336, guid: 62f1a59f6c4d5ba4abfb6d94bb4ba455, type: 3}
+  m_PrefabInstance: {fileID: 415370638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &416823058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38e6556696f9cb4b9fd84d083ee5bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tahuTekPickupObject: {fileID: 0}
+  tahuTekPickupObject: {fileID: 415370639}
 --- !u!4 &1088421297
 Transform:
   m_ObjectHideFlags: 0
@@ -3392,7 +3397,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

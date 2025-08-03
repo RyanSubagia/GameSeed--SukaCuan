@@ -938,7 +938,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1956,6 +1956,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62f1a59f6c4d5ba4abfb6d94bb4ba455, type: 3}
+--- !u!1 &775030457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4929579155961084336, guid: 62f1a59f6c4d5ba4abfb6d94bb4ba455, type: 3}
+  m_PrefabInstance: {fileID: 775030456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793862895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38e6556696f9cb4b9fd84d083ee5bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tahuTekPickupObject: {fileID: 0}
+  tahuTekPickupObject: {fileID: 775030457}
 --- !u!4 &1229576632
 Transform:
   m_ObjectHideFlags: 0
@@ -4087,7 +4092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce83f327d3396d42b84b6b72a9b77dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  timeRemaining: 600
   timerIsRunning: 0
   timerText: {fileID: 1528006445}
   gameOverPanel: {fileID: 1009391759}
